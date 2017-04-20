@@ -1,0 +1,245 @@
+@import 'partials';
+@import 'mixins';
+
+
+/*
+*-------------------------------------------------
+*	Generic Styling
+*-------------------------------------------------
+*/ 
+body{ font-family: $primary-font; }
+
+a { color: $light-gray !important; @include animate(color, 320ms); }
+
+a:hover,
+a:active{ color: #FFF !important; }
+
+.btn{ border-radius: 0px; background: $turtary-color; border: 1px solid $turtary-color; @include animate(background, 320ms); border: 0px; 
+	&:hover,
+	&:focus{ background: $secondary-color; border: 0px; }
+}
+
+.rails-font-icon{ font-size:$font-size-sm; color: #FFF; }
+
+/*
+*-------------------------------------------------
+*	MainHeader Styling
+*-------------------------------------------------
+*/ 
+#mainHeader { background: linear-gradient(-90deg, #9C27B0, #009688); height: 70vh; background-position: 50% 50%;
+}
+
+.headerContent{ height: 100%; display: table; width: 100%;
+    .headerContentinner { display: table-cell; vertical-align: middle; 
+        .branding{ text-align:center; }
+        .social{ list-style: none; margin: 1em 0em; text-align: center;
+            li{ display: inline-block; margin-right: 10px;
+                a{ font-size: 18px; }
+            }
+        }
+        .contact { text-align: center;
+            ul{ list-style: none;
+                li{ color: #FFF; display: inline-block;
+                    .rails-font-icon{ font-size: 40px; background: #fff; padding: 10px 20px; color: #ff0094; float: left; }
+                    .contact_text{ display: inline-block; background: #ff0094; padding: 9px 40px; letter-spacing: .05em; text-align: left; }
+                }
+            }
+        }
+    }
+}
+
+
+/*
+*-------------------------------------------------
+*   Table Styling
+*-------------------------------------------------
+*/
+table {
+    tr {
+        td {
+            img{
+                width: 80px;
+            }
+        }
+    }
+}
+
+
+
+
+/*
+*-------------------------------------------------
+*	Navigation Styling
+*-------------------------------------------------
+*/ 
+.rails-nav{ background-color: rgba(55, 59, 68, 0.50); text-transform: uppercase; font-size: 13px; border-radius: 0px; border: 0px; margin-bottom: 0px;
+	a:hover,
+    a:focus{ outline: none; }
+    .navbar-search{ padding: 14px; }
+}
+.navbar-collapse { border: none; }
+
+/*
+*-------------------------------------------------
+*   Navbar Modal Login Styling
+*-------------------------------------------------
+*/
+.modal {
+    .tab-content{ margin-top: 20px; }
+}
+.modal-dialog{ margin-top: 5em; }
+.modal-backdrop.in{ z-index: 5; }
+
+/*
+*-------------------------------------------------
+*	Full Screen Search Styling
+*-------------------------------------------------
+*/ 
+#search {
+    position: fixed;
+    z-index: 5;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    
+    -webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+
+    -webkit-transform: translate(0px, -100%) scale(0, 0);
+	-moz-transform: translate(0px, -100%) scale(0, 0);
+	-o-transform: translate(0px, -100%) scale(0, 0);
+	-ms-transform: translate(0px, -100%) scale(0, 0);
+	transform: translate(0px, -100%) scale(0, 0);
+    
+    opacity: 0;
+}
+
+#search.open {
+    -webkit-transform: translate(0px, 0px) scale(1, 1);
+    -moz-transform: translate(0px, 0px) scale(1, 1);
+	-o-transform: translate(0px, 0px) scale(1, 1);
+	-ms-transform: translate(0px, 0px) scale(1, 1);
+	transform: translate(0px, 0px) scale(1, 1); 
+    opacity: 1;
+}
+
+#search input[type="search"] {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0);
+    font-size: 60px;
+    font-weight: 300;
+    text-align: center;
+    border: 0px;
+    margin: 0px auto;
+    margin-top: -51px;
+    padding-left: 30px;
+    padding-right: 30px;
+    outline: none;
+}
+#search .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 61px;
+    margin-left: -45px;
+}
+#search .close {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    color: #fff;
+	background-color: #428bca;
+	border-color: #357ebd;
+	opacity: 1;
+	padding: 10px 17px;
+	font-size: 27px;
+}
+
+
+/*
+*-------------------------------------------------
+*   Article Styling
+*-------------------------------------------------
+*/
+#articles { margin: 2em 0em;
+    .sigleArticle { margin: 4em 0em;
+        .entryHeader { margin-bottom: 1em; padding: .5em 1em;
+            .entry-image{ height: 400px; overflow: hidden;
+                &:hover,
+                &:focus {
+                }
+            }
+            .entryTitle { font-weght: 400;
+                a { color: $light-gray;
+                    &:hover,
+                    &:active { color: $dark-gray !important; text-decoration: none; }
+                }
+            }
+        }
+
+        .entryContent { padding: 0em 1em; }
+
+        .entryMeta { overflow: hidden; padding: .5em 0em; margin: 1em 0em;
+            ul { list-style: none; padding: 0; margin: 0;
+                li { font-size:10px; float: left; display: inline-block; margin-right: 10px; text-transform: uppercase; letter-spacing: .03em;
+                    a{
+                        &:hover { color: $dark-gray !important; text-decoration: none;}
+                    }
+                    &:after { content: "|"; margin: 0px 10px; }
+                    &:last-child:after { content: ''; margin: 0; }
+                    i { margin-right: 10px; }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+/*
+*-------------------------------------------------
+*   Footer Styling
+*-------------------------------------------------
+*/
+#mainFooter{ background: linear-gradient(-90deg, #9C27B0, #009688); padding: 4em 0em;
+    .singleFooter{
+        .footerLink{ list-style: none;
+            li{ display: inline-block; float: left; margin-right: 1em; margin-bottom: 1em;
+                a{ display: block; 
+                    &:hover { text-decoration: none; }
+                }
+            }
+        }
+        input[type="text"] { border: 0px; border-radius: 0px; }
+    }
+}
+
+
+
+
+/*
+*-------------------------------------------------
+*   Registration Page Styling
+*-------------------------------------------------
+*/
+.registrationPage{ margin: 3em 0em; overflow: hidden; }
+
+
+
+
+/*
+*-------------------------------------------------
+*   Admin Page Styling
+*-------------------------------------------------
+*/
+#admin{ margin: 2em 0; }
