@@ -12,7 +12,7 @@
 		$class = $value['sclass'];
 		$section = $value['ssection'];
 		$age = $value['sage'];
-		// $image = $_FILES['fileToUpload']["name"];
+		$image = $value['image'];
 	}
 
 ?>
@@ -38,14 +38,18 @@
 						<div class="form-group">
 							<input name="age" type="text" class="form-control" placeholder="Student Age" value="<?php echo $age; ?>">
 						</div>
-						<!-- <div class="form-group">
-							<input type="file" name="fileToUpload" id="fileToUpload" value="<?php echo $image; ?>">
-						</div> -->
 						<div class="form-group">
-							<input type="submit" name="submit" class="btn btn-info">
+				            <input type="file" name="fileToUpload" id="fileToUpload" > 
+						</div>
+						<div class="form-group">
+							<input type="submit" name="submit" class="btn btn-info" value="update">
 						</div>
 					</form>
 				</article>				
 			</div>
 		</div>
 	</div>
+
+
+<?php 
+	include 'inc/footer.php';

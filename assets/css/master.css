@@ -18,19 +18,32 @@ a:hover,
 a:active {
   color: #FFF !important; }
 
-.btn {
-  border-radius: 0px;
-  background: #E32551;
-  border: 1px solid #E32551;
-  -webkit-transition: background 320ms;
-  -moz-transition: background 320ms;
-  -ms-transition: background 320ms;
-  -o-transition: background 320ms;
-  transition: background 320ms;
-  border: 0px; }
-  .btn:hover, .btn:focus {
-    background: #FC0F3E;
-    border: 0px; }
+/*
+*-------------------------------------------------
+*   Button Styling
+*-------------------------------------------------
+*/
+.image-preview-input {
+  position: relative;
+  overflow: hidden;
+  margin: 0px;
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc; }
+
+.image-preview-input input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0); }
+
+.image-preview-input-title {
+  margin-left: 2px; }
 
 .rails-font-icon {
   font-size: 18px;

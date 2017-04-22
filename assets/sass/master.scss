@@ -14,10 +14,45 @@ a { color: $light-gray !important; @include animate(color, 320ms); }
 a:hover,
 a:active{ color: #FFF !important; }
 
-.btn{ border-radius: 0px; background: $turtary-color; border: 1px solid $turtary-color; @include animate(background, 320ms); border: 0px; 
-	&:hover,
-	&:focus{ background: $secondary-color; border: 0px; }
+/*
+*-------------------------------------------------
+*   Button Styling
+*-------------------------------------------------
+*/
+// .filebtn {
+//     .btn{
+//         border: none; border-radius: 3px; background-color: #ddd !important;
+//     }
+// }
+
+// .btn{ border-radius: 0px; background: $turtary-color; border: 1px solid $turtary-color; @include animate(background, 320ms); border: 0px; 
+// 	&:hover,
+// 	&:focus{ background: $secondary-color; border: 0px; }
+// }
+
+.image-preview-input {
+    position: relative;
+    overflow: hidden;
+    margin: 0px;    
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;    
 }
+.image-preview-input input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.image-preview-input-title {
+    margin-left:2px;
+}
+
 
 .rails-font-icon{ font-size:$font-size-sm; color: #FFF; }
 
