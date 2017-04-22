@@ -6,7 +6,7 @@ This is a simple student management system based on Raw PHP
 
 ----------
 >**Note:**
->-] Create a new database and named it ####sms
+>-] Create a new database and named it *sms*
 >-] This is a note for this document
 
 #### <i class="icon-file"></i> Create a Student
