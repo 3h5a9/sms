@@ -13,4 +13,4 @@
 	$sql = "UPDATE student SET sroll='$roll', sname='$name', sclass='$class', ssection='$section', sage='$age', image='$image' WHERE id=".$id;
 	$result = $conn->query($sql);
 
-	header('Location: index.php');
+	header('Location: show.php');
