@@ -51,6 +51,7 @@
 									<input type="submit" name="submit" value="Login" class="btn btn-info">
 								</div>
 							</form>
+
 							<form action="logout.php">
 								<input type="submit" name="submit" value="Logout" class="btn btn-info">
 							</form>

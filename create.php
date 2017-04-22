@@ -1,6 +1,8 @@
 <?php 
 	include 'dbh.php';
 	include 'inc/header.php';
+	include 'auth.php';
+
 ?>
 	<div class="container">
 		<div class="row">

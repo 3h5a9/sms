@@ -12,6 +12,7 @@
 		echo "Your Username or Password is incorrect!";
 	} else {
 		$_SESSION['email'] = $row['email'];
+		$_SESSION['loggedin'] = 1;
 	}
 
 	header('Location: index.php');
