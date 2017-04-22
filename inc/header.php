@@ -39,6 +39,7 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="/app/sms/create.php">Create</a></li>
+            <li><a href="/app/sms/show.php">Show</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->

@@ -1,6 +1,7 @@
 <?php 
     include 'dbh.php';
     include 'inc/header.php';
+    include 'auth.php';
 
     $sql = "SELECT * FROM student";
     $result = $conn->query($sql);

@@ -39,7 +39,9 @@
 							<input name="age" type="text" class="form-control" placeholder="Student Age" value="<?php echo $age; ?>">
 						</div>
 						<div class="form-group">
-				            <input type="file" name="fileToUpload" id="fileToUpload" > 
+				            	<input type="file" name="fileToUpload" id="fileToUpload" >
+
+				            	<input type="text" name="fileToUpload" class="form-control" readonly value="<?php echo $image; ?>">
 						</div>
 						<div class="form-group">
 							<input type="submit" name="submit" class="btn btn-info" value="update">

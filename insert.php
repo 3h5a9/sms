@@ -14,4 +14,4 @@
 	$result = $conn->query($sql);
 
 
-	header('Location: /app/sms');
+	header('Location: /app/sms/show.php');

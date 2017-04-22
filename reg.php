@@ -17,4 +17,4 @@
 	$sql = "INSERT INTO user (email, password) VALUES ( '$email', '$pass' )";
 	$result = $conn->query($sql);
 
-	header("Location: admin.php");
+	header("Location: index.php");
